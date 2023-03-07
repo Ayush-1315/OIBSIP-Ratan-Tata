@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Tilt+Neon&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+:root{
+    --background:#804674;
+    --head-Color:#F5FFC9;
+    --quote:#B3E5BE;
+    --biographyC:#B3E5BE;
+    --head-font:'Smokum', cursive;
+    --quote-Font:'Shantell Sans', cursive;
+    --biography:'Quicksand', sans-serif;
+    --list-Family:'Tilt Neon', cursive;
+    --header-footer:#191825;
+    --head-foot-color:#E384FF;
+    --content:80vw;
+    --quote-width:50%;
+    --biography-width:50rem;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    min-height: 100vh;
+    width:100vw;
+    background-color:antiquewhite;
+}
+.content{
+    width:var(--content);
+    margin: 0 auto;
+    background-color: var(--background);
+}
+.head h1,.head h2{
+    color:var(--head-Color);
+    font-family: var(--head-font);
+    letter-spacing: 5px;
+    font-size:3rem;
+}
+h1,h2{
+    text-align: center;
+}
+#intro{
+    width:var(--quote-width);
+    color:var(--quote);
+    font-family: var(--quote-Font);
+    margin:0.5rem;
+}
+.description{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 55vw;
+    margin: auto;
+}
+#profile{
+    background-image: url('./resources/ratanTata.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20%;
+    height:15rem;
+    width:15rem;
+}
+.about>h2{
+    margin:2rem;
+    color:#F5FFC9;
+    text-decoration: underline;
+    font-family:var(--biography);
+    font-size: 2rem;
+}
+.about>p{
+    width:var(--biography-width);
+    color:var(--biographyC);
+    margin: 0 auto;
+    font-size:1.3rem;
+    text-align: justify;
+    font-family: var(--quote-Font);
+}
+footer{
+    color: var(--head-foot-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-footer);
+    padding:1rem;
+    min-height:10vh;
+    text-align: center;
+    font-size:var(--foot-font);
+    font-family: var(--list-Family);
+}
+a{
+    margin:0.5rem;
+    font-size: 1.5rem;
+}
+/* Media Queries */
+@media screen and (max-width: 1024px){
+    :root{
+        --biography-width: 90%;
+    }
+    .description {
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 720px){
+    :root{
+        --quote-width:100%;
+        --biography-width:90%;
+    }
+    .description {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 480px){
+    :root{
+     --content:80vw;
+     --quote-width:100%;
+     --biography-width:90%;
+    }
+    .description {
+        flex-wrap: wrap;
+    }
+}
